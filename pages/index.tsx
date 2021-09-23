@@ -3,8 +3,12 @@ import { MainLayout } from '../components/MainLayout'
 
 const Home: NextPage = () => {
   return (
-    <MainLayout>
-      
+    <MainLayout
+      description={''}
+      keywords={''}
+      title={''}
+    >
+
     </MainLayout>
   )
 }
