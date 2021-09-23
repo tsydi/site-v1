@@ -22,8 +22,6 @@ h1 { font-family: var(--cursive); }
 .activeMob::before { width: 2px; height: 100%; left: -17px; top: 1px; background: var(--theme-color-light); border-radius: 5px; }
 .overlay { background: var(--theme-color-normal); }
 
-.iconsColor { color: var(--theme-color-bold); }
-
 /* Breakpoints */
 @media (min-width: 1920px) {
   body { font-size: calc(0.5em + 0.50vw); }
