@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --cursive: 'Kaushan Script', cursive;
+  --sans-serif: 'Quicksand', sans-serif;
+
+  --theme-color-light: #FAFAFA;
+  --theme-color-normal: rgba(77, 208, 225, 0.85);
+  --theme-color-bold: rgba(0, 172, 193, 1);
+  --theme-color-dark: #050505;
+}
+
+main { background: var(--theme-color-light); }
+header { background: var(--theme-color-bold); }
+footer { background: var(--theme-color-dark); }
+
+body { font-family: var(--sans-serif); }
+h1 { font-family: var(--cursive); }
+.active, .activeMob { position: relative; }
+.active::before, .activeMob::before { content: ''; position: absolute; }
+.active::before { width: 45%; height: 2px; bottom: -7px; background: var(--theme-color-light); border-radius: 5px; }
+.activeMob::before { width: 2px; height: 100%; left: -17px; top: 1px; background: var(--theme-color-light); border-radius: 5px; }
+.overlay { background: var(--theme-color-normal); }
+
+.iconsColor { color: var(--theme-color-bold); }
+
+/* Breakpoints */
+@media (min-width: 1920px) {
+  body { font-size: calc(0.5em + 0.50vw); }
+  main { padding: 50px calc(30vw - 300px); }
+  header { padding: 20px calc(30vw - 300px); }
+  footer { padding: 20px calc(30vw - 300px); }
+}
+@media (min-width: 1025px) and (max-width: 1919px) {
+  body { font-size: calc(0.5em + 0.55vw); }
+  main { padding: 50px calc(15vw - 50px); }
+  header { padding: 15px calc(15vw - 50px); }
+  footer { padding: 15px calc(15vw - 50px); }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  body { font-size: calc(0.5em + 0.85vw); }
+  main { padding: 50px calc(10vw - 20px); }
+  header { padding: 15px calc(10vw - 20px); }
+  footer { padding: 15px calc(10vw - 20px); }
+}
+@media (max-width: 600px) {
+  body { font-size: calc(0.5em + 2vw); }
+  main { padding: 50px calc(10vw - 20px); }
+  header { padding: 10px calc(10vw - 20px); }
+  footer { padding: 10px calc(10vw - 20px); }
+}
