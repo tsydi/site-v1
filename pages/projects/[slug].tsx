@@ -36,7 +36,7 @@ export default Project
 export const getServerSideProps: GetServerSideProps = async (pageContext) => {
   const pageSlug = pageContext.query.slug
 
-  const projectQuery = groq`*[ _type == "component" && slug.current == $pageSlug][0]{
+  const projectQuery = groq`*[ _type == "project" && slug.current == $pageSlug][0]{
     _id,
     title,
     technologies,
